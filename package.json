@@ -1,0 +1,19 @@
+{
+  "name": "os-metrics",
+  "productName": "OSMetrics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "electronmon ./app/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^24.1.2"
+  },
+  "devDependencies": {
+    "electronmon": "^2.0.2"
+  }
+}
