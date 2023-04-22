@@ -2,7 +2,8 @@ const path = require('path');
 
 class Config {
   constructor() {
-    this.htmlFile = path.join(__dirname, '..', 'client', 'build', 'index.html');
+    const htmlDir = process.env.NODE_ENV === 'production' ? 'build' : 'public';
+    this.htmlFile = path.join(__dirname, '..', 'client', htmlDir, 'index.html');
     this.windowData = {
       height: 500,
       width: 300,

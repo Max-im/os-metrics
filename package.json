@@ -5,7 +5,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "electronmon ./app/index.js"
+    "dev": "electronmon ./app/index.js",
+    "client": "npm run start --prefix client",
+    "build": "",
+    "start": "NODE_EVN=production electron ./app/index.js"
   },
   "keywords": [],
   "author": "",
