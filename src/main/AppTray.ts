@@ -1,11 +1,13 @@
-const { Tray, Menu, app } = require('electron');
+import { Tray, BrowserWindow } from 'electron';
+import Config from './Config';
 
-class AppTray extends Tray {
-  constructor(appWindow, config) {
+export default class AppTray extends Tray {
+  appWindow: BrowserWindow;
+
+  constructor(appWindow: BrowserWindow, config: Config) {
     super(config.iconPath);
 
     this.appWindow = appWindow;
-
     this.setToolTip(config.appName);
     this.on('click', (e, bounds) => {
       const { x, y } = bounds;
@@ -24,18 +26,5 @@ class AppTray extends Tray {
         this.appWindow.show();
       }
     });
-
-    this.on('right-click', () => {
-      const menuConfig = Menu.buildFromTemplate([
-        {
-          label: 'Quit',
-          click: () => app.quit(),
-        },
-      ]);
-
-      this.popUpContextMenu(menuConfig);
-    });
   }
 }
-
-module.exports = AppTray;

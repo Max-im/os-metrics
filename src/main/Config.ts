@@ -1,7 +1,12 @@
 const { app } = require('electron');
 const path = require('path');
 
-class Config {
+export default class Config {
+  htmlFile: string;
+  windowData: any;
+  iconPath: string;
+  appName: string;
+
   constructor() {
     if (process.env.NODE_ENV === 'development') {
       const port = process.env.PORT || 1212;
@@ -17,7 +22,7 @@ class Config {
 
     this.windowData = {
       height: 500,
-      width: 1200,
+      width: 800,
       frame: false,
       // resizable: false,
       show: false,
@@ -41,5 +46,3 @@ class Config {
     this.appName = 'OS Monitor';
   }
 }
-
-module.exports = Config;

@@ -1,42 +1,22 @@
-import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './Header';
-import Metrics from './Metrics';
-import Metric from './Metric';
-import Settings from './Settings';
-import Exit from './Exit';
+import { useState, useEffect } from 'react';
 import DataContext from '../context/DataContext';
-
-const routes = [
-  {
-    url: '/',
-    element: Metrics,
-  },
-  {
-    url: '/metric/:id',
-    element: Metric,
-  },
-  {
-    url: '/settings',
-    element: Settings,
-  },
-  {
-    url: '/exit',
-    element: Exit,
-  },
-];
+import IData from '../../interfaces/Data';
+import Header from './Header';
+import routes from '../routes';
+import '../styles/app.css';
 
 function App() {
-  const [osData, setData] = useState([]);
+  const [osData, setData] = useState<IData[]>([]);
 
   useEffect(() => {
     setInterval(() => {
-      window.electron.ipcRenderer.sendMessage('get.data');
+      window.electron.ipcRenderer.sendMessage('get.data', []);
     }, 3000);
   }, []);
 
   window.electron.ipcRenderer.on('os.data', (data) => {
-    const newData = [...osData, data];
+    const newData = [...osData, data] as IData[];
     setData(newData);
   });
 
