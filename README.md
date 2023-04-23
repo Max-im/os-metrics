@@ -1,6 +1,6 @@
 # OS-metrics
 
-`OS-metrics` is an Electron-based desktop application that provides real-time monitoring of system metrics on your computer. The application is built using `Node.js` and `React`, and is designed to be highly informable.
+`OS-metrics` is an Electron-based desktop application that provides real-time monitoring of system metrics on your computer. The application is built using `Node.js` and `React`, and is designed to be highly informable. Based on [electron react boilerplate](https://github.com/electron-react-boilerplate/electron-react-boilerplate.git)
 
 ## Features
 
