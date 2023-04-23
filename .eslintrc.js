@@ -10,6 +10,7 @@ module.exports = {
     'import/no-import-module-exports': 'off',
     'no-new': 'off',
     'class-methods-use-this': 'off',
+    'react/destructuring-assignment': 'off',
     'lines-between-class-members': [
       'error',
       'always',
