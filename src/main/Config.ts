@@ -21,8 +21,8 @@ export default class Config {
     }
 
     this.windowData = {
-      height: 500,
-      width: 800,
+      height: 420,
+      width: 380,
       frame: false,
       // resizable: false,
       show: false,

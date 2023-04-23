@@ -10,15 +10,16 @@ function Header() {
         {routes
           .filter((route) => route.inMenu)
           .map((route) => (
-            <NavLink
-              key={route.url}
-              to={route.url}
-              className={({ isActive }) =>
-                isActive ? 'navLink__active navLink' : 'navLink'
-              }
-            >
-              {route.title}
-            </NavLink>
+            <button key={route.url} className="button">
+              <NavLink
+                to={route.url}
+                className={({ isActive }) =>
+                  isActive ? 'navLink__active navLink' : 'navLink'
+                }
+              >
+                {route.title}
+              </NavLink>
+            </button>
           ))}
       </nav>
     </header>

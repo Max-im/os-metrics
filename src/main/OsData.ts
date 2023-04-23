@@ -24,7 +24,7 @@ export default class OsData implements IData {
     };
 
     this.cpuModel = {
-      name: 'CPU Model',
+      name: 'CPU',
       value: cpus[0].model,
     };
 
@@ -60,7 +60,7 @@ export default class OsData implements IData {
 
     this.memUsege = {
       name: 'Memory Usege',
-      value: Math.floor((totalMem - freeMem / totalMem) * 100) / 100,
+      value: `${Math.floor(((totalMem - freeMem) / totalMem) * 100)}%`,
     };
   }
 
