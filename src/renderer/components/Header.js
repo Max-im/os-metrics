@@ -5,6 +5,7 @@ import '../styles/headers.css';
 const links = [
   { url: '/', title: 'OS-Metrics' },
   { url: '/settings', title: 'Settings' },
+  { url: '/exit', title: 'Quit' },
 ];
 
 function Header() {

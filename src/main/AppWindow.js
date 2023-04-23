@@ -1,4 +1,4 @@
-const { BrowserWindow, ipcMain } = require('electron');
+const { BrowserWindow, ipcMain, app } = require('electron');
 const OsData = require('./OsData');
 
 class AppWindow extends BrowserWindow {
@@ -8,6 +8,7 @@ class AppWindow extends BrowserWindow {
     this.loadURL(url);
     this.on('blur', this.onBlur.bind(this));
     ipcMain.on('get.data', this.onGetData.bind(this));
+    ipcMain.on('exit.app', this.onExit.bind(this));
   }
 
   onBlur() {
@@ -16,7 +17,11 @@ class AppWindow extends BrowserWindow {
 
   onGetData() {
     const data = new OsData();
-    this.webContents.send('os:data', data);
+    this.webContents.send('os.data', data);
+  }
+
+  onExit() {
+    app.quit();
   }
 }
 
