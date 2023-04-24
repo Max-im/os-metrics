@@ -4,7 +4,7 @@
 
 ## Features
 
-- Real-time monitoring of CPU usage, memory usage, disk usage, and network activity
+- Real-time monitoring of CPU usage and memory usage
 - Customizable charts and visualizations for each metric
 - Ability to set custom thresholds and alerts for each metric
 
