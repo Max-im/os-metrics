@@ -61,7 +61,7 @@ export default class OsData implements IData {
       },
       memUsege: {
         name: 'Memory Usege',
-        value: `${Math.floor(((totalMem - freeMem) / totalMem) * 100)}%`,
+        value: Math.floor(((totalMem - freeMem) / totalMem) * 100),
       },
     };
   }

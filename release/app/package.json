@@ -1,12 +1,11 @@
 {
   "name": "electron-react-boilerplate",
-  "version": "4.6.0",
-  "description": "A foundation for scalable desktop apps",
+  "version": "0.1.0",
+  "description": "Real-time monitoring of CPU usage and memory usage",
   "license": "MIT",
   "author": {
-    "name": "Electron React Boilerplate Maintainers",
-    "email": "electronreactboilerplate@gmail.com",
-    "url": "https://github.com/electron-react-boilerplate"
+    "name": "OS-Metrics",
+    "email": "pogidaevmo@gmail.com"
   },
   "main": "./dist/main/main.js",
   "scripts": {

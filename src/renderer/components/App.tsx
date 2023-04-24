@@ -8,6 +8,7 @@ import '../styles/app.css';
 
 function App() {
   const [osData, setData] = useState<IData[]>([]);
+  const maxValuesNum = 30;
 
   useEffect(() => {
     setInterval(() => {
@@ -17,6 +18,9 @@ function App() {
 
   window.electron.ipcRenderer.on('os.data', (data) => {
     const newData = [...osData, data] as IData[];
+    while (newData.length > maxValuesNum) {
+      newData.shift();
+    }
     setData(newData);
   });
 

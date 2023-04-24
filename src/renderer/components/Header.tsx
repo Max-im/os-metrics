@@ -1,16 +1,23 @@
 import * as React from 'react';
-import { NavLink } from 'react-router-dom';
+import { useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import routes from '../routes';
 import '../styles/headers.css';
 
 function Header() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    navigate('/');
+  }, [navigate]);
+
   return (
     <header className="header">
       <nav className="nav">
         {routes
           .filter((route) => route.inMenu)
           .map((route) => (
-            <button key={route.url} className="button">
+            <button key={route.url} type="button" className="button">
               <NavLink
                 to={route.url}
                 className={({ isActive }) =>
