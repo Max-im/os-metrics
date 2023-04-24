@@ -1,7 +1,6 @@
 import Metrics from '../pages/Metrics';
 import Metric from '../pages/Metric';
 import Exit from '../pages/Exit';
-// import Settings from '../pages/Settings';
 
 export const metric = {
   url: '/metric/:id',
@@ -18,12 +17,6 @@ const routes = [
     inMenu: true,
   },
   metric,
-  // {
-  //   url: '/settings',
-  //   element: Settings,
-  //   title: 'Settings',
-  //   inMenu: true,
-  // },
   {
     url: '/exit',
     element: Exit,

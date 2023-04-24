@@ -20,7 +20,6 @@ To install `OS-metrics`, follow these steps:
 
 `OS-metrics` is designed to be easy to use and highly customizable. Once you launch the application, you'll see a dashboard that displays real-time metrics for your system. You can customize the dashboard by adding, removing, or rearranging the charts for each metric.
 
-To customize the application further, you can use the settings menu to configure alerts, set custom thresholds, and install plugins or integrations.
 
 ## Contributing
 
